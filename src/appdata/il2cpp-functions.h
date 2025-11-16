@@ -14,6 +14,7 @@ DO_APP_FUNC(0x0165A340, bool, AreaEffectEntity_OnHitActor, (AreaEffectEntity* __
 DO_APP_FUNC(0x016605A0, bool, AreaEffect_AttackComponent_OnHitActor, (AreaEffect_AttackComponent* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* entity, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
 DO_APP_FUNC(0x016A4390, bool, AdventureWeapon_OnHitActor, (AdventureWeapon* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* actor, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
 DO_APP_FUNC(0x0168A870, bool, AdventureBulletBase_OnHitActor, (AdventureBulletBase* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* actor, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
+DO_APP_FUNC(0x016A5550, int32_t, AdventureWeapon_get_uniqueAttackId, (AdventureWeapon* __this, MethodInfo* method));
 
 // No Cooldown
 DO_APP_FUNC(0x01474580, void, PlayerSkillCd_ReduceSkillSection, (PlayerSkillCd* __this, int32_t skillId, bool beginResume, MethodInfo* method));

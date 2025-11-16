@@ -63,8 +63,11 @@ namespace cheat::feature
 		}
 
 		if (hitEffect.f_MultiHit && !isPlayer(actor)) {
+			auto fromWeapon = (*app::AdventureActor__TypeInfo)->static_fields->fromWeaponTemp;
+
 			for (int i = 0; i < hitEffect.f_MultiHitMultiplier; i++) {
-				CALL_ORIGIN(AdventureActor_OnHitActor_Hook, __this, hitBox, uniqueAttackId, onceAttackTargetCount, actor, raycastHit, damaged, hurtEffectPrefab, isHittedEffectScale, effectIgnoreTimeScale, method);
+				auto attackId = i ? app::AdventureWeapon_get_uniqueAttackId(fromWeapon, nullptr) : uniqueAttackId;
+				CALL_ORIGIN(AdventureActor_OnHitActor_Hook, __this, hitBox, attackId, onceAttackTargetCount, actor, raycastHit, damaged, hurtEffectPrefab, isHittedEffectScale, effectIgnoreTimeScale, method);
 			}
 
 			*damaged = true;
@@ -83,8 +86,11 @@ namespace cheat::feature
 		}
 
 		if (hitEffect.f_MultiHit && !isPlayer(entity)) {
+			auto fromWeapon = (*app::AdventureActor__TypeInfo)->static_fields->fromWeaponTemp;
+
 			for (int i = 0; i < hitEffect.f_MultiHitMultiplier; i++) {
-				CALL_ORIGIN(AreaEffectEntity_OnHitActor_Hook, __this, hitBox, uniqueAttackId, onceAttackTargetCount, entity, raycastHit, damaged, hurtEffectPrefab, isHittedEffectScale, effectIgnoreTimeScale, method);
+				auto attackId = i ? app::AdventureWeapon_get_uniqueAttackId(fromWeapon, nullptr) : uniqueAttackId;
+				CALL_ORIGIN(AreaEffectEntity_OnHitActor_Hook, __this, hitBox, attackId, onceAttackTargetCount, entity, raycastHit, damaged, hurtEffectPrefab, isHittedEffectScale, effectIgnoreTimeScale, method);
 			}
 
 			*damaged = true;
@@ -103,8 +109,11 @@ namespace cheat::feature
 		}
 
 		if (hitEffect.f_MultiHit && !isPlayer(entity)) {
+			auto fromWeapon = (*app::AdventureActor__TypeInfo)->static_fields->fromWeaponTemp;
+
 			for (int i = 0; i < hitEffect.f_MultiHitMultiplier; i++) {
-				CALL_ORIGIN(AreaEffect_AttackComponent_OnHitActor_Hook, __this, hitBox, uniqueAttackId, onceAttackTargetCount, entity, raycastHit, damaged, hurtEffectPrefab, isHittedEffectScale, effectIgnoreTimeScale, method);
+				auto attackId = i ? app::AdventureWeapon_get_uniqueAttackId(fromWeapon, nullptr) : uniqueAttackId;
+				CALL_ORIGIN(AreaEffect_AttackComponent_OnHitActor_Hook, __this, hitBox, attackId, onceAttackTargetCount, entity, raycastHit, damaged, hurtEffectPrefab, isHittedEffectScale, effectIgnoreTimeScale, method);
 			}
 
 			*damaged = true;
@@ -124,8 +133,11 @@ namespace cheat::feature
 		}
 
 		if (hitEffect.f_MultiHit && !isPlayer(actor)) {
+			auto fromWeapon = (*app::AdventureActor__TypeInfo)->static_fields->fromWeaponTemp;
+
 			for (int i = 0; i < hitEffect.f_MultiHitMultiplier; i++) {
-				CALL_ORIGIN(AdventureWeapon_OnHitActor_Hook, __this, hitBox, uniqueAttackId, onceAttackTargetCount, actor, raycastHit, damaged, hurtEffectPrefab, isHittedEffectScale, effectIgnoreTimeScale, method);
+				auto attackId = i ? app::AdventureWeapon_get_uniqueAttackId(fromWeapon, nullptr) : uniqueAttackId;
+				CALL_ORIGIN(AdventureWeapon_OnHitActor_Hook, __this, hitBox, attackId, onceAttackTargetCount, actor, raycastHit, damaged, hurtEffectPrefab, isHittedEffectScale, effectIgnoreTimeScale, method);
 			}
 
 			*damaged = true;
@@ -144,8 +156,11 @@ namespace cheat::feature
 		}
 
 		if (hitEffect.f_MultiHit && !isPlayer(actor)) {
+			auto fromWeapon = (*app::AdventureActor__TypeInfo)->static_fields->fromWeaponTemp;
+
 			for (int i = 0; i < hitEffect.f_MultiHitMultiplier; i++) {
-				CALL_ORIGIN(AdventureBulletBase_OnHitActor_Hook, __this, hitBox, uniqueAttackId, onceAttackTargetCount, actor, raycastHit, damaged, hurtEffectPrefab, isHittedEffectScale, effectIgnoreTimeScale, method);
+				auto attackId = i ? app::AdventureWeapon_get_uniqueAttackId(fromWeapon, nullptr) : uniqueAttackId;
+				CALL_ORIGIN(AdventureBulletBase_OnHitActor_Hook, __this, hitBox, attackId, onceAttackTargetCount, actor, raycastHit, damaged, hurtEffectPrefab, isHittedEffectScale, effectIgnoreTimeScale, method);
 			}
 
 			*damaged = true;
